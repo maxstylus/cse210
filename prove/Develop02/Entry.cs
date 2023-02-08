@@ -13,15 +13,9 @@ public class Entry
         return currentDate;
     }
 
-    // public string getPrompt()
-    // {
-    //     string _prompt = getRandomPrompt();
-    //     return _prompt;
-    // }
-
     public void displayJournalPrompt()
     {
-        _prompt = PromptGenerator.getRandomPrompt(); //getPrompt();
+        _prompt = PromptGenerator.getRandomPrompt(); 
         Console.WriteLine(_prompt);
         Console.Write("> ");        
     }
@@ -41,23 +35,4 @@ public class Entry
         Console.WriteLine($"Entry: {_entry}");
     }        
 
-    // public string getRandomPrompt()
-    // {
-    //     List<string> journalPrompts = new List<string>
-    //     {
-    //         "Who was the most interesting person I interacted with today?",
-    //         "What was the best part of my day?",
-    //         "How did I see the hand of the Lord in my life today?",
-    //         "What was the strongest emotion I felt today?",
-    //         "If I had one thing I could do over today, what would it be?", 
-    //         "What was a lesson learnt today?", 
-    //         "Who did I help today?"
-    //     };  
-        
-    //     var random = new Random();
-    //     int index = random.Next(journalPrompts.Count);
-    //     string prompt = journalPrompts[index];
-
-    //     return prompt;       
-    // }
 }

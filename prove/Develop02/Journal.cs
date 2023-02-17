@@ -16,6 +16,8 @@ public class Journal
     public void saveToTxtFile()
     {
         string fileName = _textFileName;
+        Console.WriteLine("What would you like to name your file? ");
+        fileName = Console.ReadLine();
 
         using (StreamWriter outputFile = new StreamWriter(fileName))
         {
@@ -34,6 +36,11 @@ public class Journal
     public void readFromTxtFile()
     {
         string filename = _textFileName;
+
+        Console.WriteLine("What file would you like to open? "); 
+        filename = Console.ReadLine();
+        Console.WriteLine();
+    
         string[] lines = System.IO.File.ReadAllLines(filename);
 
         foreach (string line in lines)

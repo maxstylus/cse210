@@ -1,0 +1,3 @@
+Simple Goal, Make Bed, I will make my bed every morning. , 20, False
+Eternal Goal, Say Prayers, I will say my prayers every night, 20
+Checklist Goal, Excercise, I will do exercises at least 3 times a week, 20, 500, 6, 0

@@ -67,11 +67,13 @@ public class Totals
     {
         List<string> goals = SaveLoadCSV.LoadFromCSV();
         Console.WriteLine();
+
+        Console.WriteLine($"\n The goals are: ");
         foreach (String goal in goals)
         {
             string[] goalParts = goal.Split(",");
             string myGoalType = goalParts[0];
-            Console.WriteLine($"\n The goals are: ");
+            
 
             switch(myGoalType)
             {

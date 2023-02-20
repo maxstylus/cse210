@@ -115,15 +115,18 @@ public class Totals
     {
         Console.WriteLine("Which goal did you accomplish?");
         int goalNumber = int.Parse(Console.ReadLine());
-        int index = goalNumber - 1;
+        int index = goalNumber - 1;  // because index is zero based.
                     
-         Goal updatedGoal = _allGoals[index];
-         int goalPoints = updatedGoal.getPoints();
+        Goal updatedGoal = _allGoals[index];
+        int goalPoints = updatedGoal.getPoints();
+        updatedGoal.recordEvent();
 
-         addToPoints(goalPoints);
-         string goalString = updatedGoal.getGoalAsString();
-         
-         goalString = goalString.Replace("[ ]", "[X]");
+        addToPoints(goalPoints);
+        Console.WriteLine($"You now have {_points}.");
+
+        // Not sure if these two lines are working >>        
+        string goalString = updatedGoal.getGoalAsString();        
+        goalString = goalString.Replace("[ ]", "[X]");
 
 
          

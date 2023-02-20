@@ -20,8 +20,8 @@ public class SimpleGoal : Goal
     }
 
     public override string getGoalAsString()
-    {
-        string mySimpleGoal = ($"[ ] {getName()}, ({getDescription()})");
+    {       
+        string mySimpleGoal = ($"[{((getGoalComplete() == false) ? " " : "X")}] {getName()}, ({getDescription()})");
         return mySimpleGoal;
     }
 

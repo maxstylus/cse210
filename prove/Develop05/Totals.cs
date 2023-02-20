@@ -49,6 +49,8 @@ public class Totals
             Console.WriteLine(goal.getGoalAsTitleOnly());
             count++;
         }
+
+        Console.WriteLine();
     }
 
     public List<string> getAllGoalsToSave()

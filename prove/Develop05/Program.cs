@@ -73,25 +73,10 @@ class Program
                     break;
                 case 5:
                     // Record Event
-                    Console.WriteLine("\nThe goals are: \n");
                     totals.displayAllGoalsTitles();
 
-                    Console.WriteLine("Which goal did you accomplish?");
-                    int accomplishedGoal = int.Parse(Console.ReadLine());
-
-
-                    // Console.WriteLine("Which goal did you accomplish?");
-                    // int goalNumber = int.Parse(Console.ReadLine());
-
-                    // Locate 'goal' in the list of goals by index(goalNumber -1)
-                    // goal.getPoints()
-                    // totalPoints + goal.getPoints
-                    // locate goal string and replace "[ ]" with "[X]"
-                    // Print "Congratulations! You have earned {goal.getPoints}
-                    // Print "You now have totalPoints()
-
-                    // You have totalPoints
-
+                    totals.recordEvent();
+                    
                     break;
                 case 6:
                     // Quit 

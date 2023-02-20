@@ -74,9 +74,7 @@ class Program
                 case 5:
                     // Record Event
                     totals.displayAllGoalsTitles();
-
-                    totals.recordEvent();
-                    
+                    totals.recordEvent();                    
                     break;
                 case 6:
                     // Quit 
@@ -90,6 +88,5 @@ class Program
             }
 
         } while(menuChoice <= 6);
-
     }
 }

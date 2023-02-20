@@ -57,10 +57,16 @@ public class Goal
         return myGoal;
     }
 
-    public virtual void recordEvent()
+    public virtual void congratulationPoints()
     {
         Console.WriteLine($"Congratulations! You have earned {getPoints()}!");
     }
 
+    public virtual void updateChecklist()
+    {
+        // only applicable for the checklist goal.
+    }
+
+    
 
 }

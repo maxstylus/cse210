@@ -31,7 +31,7 @@ public class SimpleGoal : Goal
         return myGoal;
     }
 
-    public override void recordEvent()
+    public override void congratulationPoints()
     {
         Console.WriteLine($"Congratulations! You have earned {getPoints()}!");
         _isComplete = true;

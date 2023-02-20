@@ -93,8 +93,7 @@ public class Totals
                     Console.WriteLine($"[ ] {goalParts[1]}, ({goalParts[2]})"); 
                     break;
                 case "Checklist Goal":
-                    // ($"[ ] {getName()}, ({getDescription()}) -- Currently Completed: {_completed}/{_numTimesToComplete}");
-                    if (goalParts[5] == goalParts[6])
+                    if (int.Parse(goalParts[6]) >= int.Parse(goalParts[5]))
                     {
                         Console.WriteLine($"[X] {goalParts[1]}, ({goalParts[2]}) -- Currently Completed: {goalParts[6]}/{goalParts[5]}");
                     } 
@@ -119,24 +118,15 @@ public class Totals
                     
         Goal updatedGoal = _allGoals[index];
         int goalPoints = updatedGoal.getPoints();
-        updatedGoal.recordEvent();
+        updatedGoal.congratulationPoints();
+        updatedGoal.updateChecklist();
 
+        // Add to Total Points
         addToPoints(goalPoints);
         Console.WriteLine($"You now have {_points}.");
 
-        // Not sure if these two lines are working >>        
-        string goalString = updatedGoal.getGoalAsString();        
-        goalString = goalString.Replace("[ ]", "[X]");
 
 
-         
-         // Locate 'goal' in the list of goals by index(goalNumber -1)
-        // goal.getPoints()
-        // totalPoints + goal.getPoints
-        // locate goal string and replace "[ ]" with "[X]"
-        // Print "Congratulations! You have earned {goal.getPoints}
-        // Print "You now have totalPoints()
 
-        // You have totalPoints
     }
 }
